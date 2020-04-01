@@ -44,7 +44,8 @@ var exports = function(body) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('body')) {
       obj['body'] = V1EmployeeRole.constructFromObject(data['body']);

@@ -45,7 +45,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('created_at')) {
       obj['created_at'] = TimeRange.constructFromObject(data['created_at']);

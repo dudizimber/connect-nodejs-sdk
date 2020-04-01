@@ -47,7 +47,8 @@ var exports = function(cardNonce) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('card_nonce')) {
       obj['card_nonce'] = ApiClient.convertToType(data['card_nonce'], 'String');

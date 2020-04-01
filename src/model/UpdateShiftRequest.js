@@ -44,7 +44,8 @@ var exports = function(shift) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('shift')) {
       obj['shift'] = Shift.constructFromObject(data['shift']);

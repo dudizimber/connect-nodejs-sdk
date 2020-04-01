@@ -54,7 +54,8 @@ var exports = function(id, receivableId, refundId, transactionLocationId, amount
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('id')) {
       obj['id'] = ApiClient.convertToType(data['id'], 'String');

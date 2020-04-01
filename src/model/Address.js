@@ -56,7 +56,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    ////obj = obj || new exports();
+    obj = obj || {};
 
       if (data.hasOwnProperty('address_line_1')) {
       obj['address_line_1'] = ApiClient.convertToType(data['address_line_1'], 'String');

@@ -48,7 +48,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('begin_time')) {
       obj['begin_time'] = ApiClient.convertToType(data['begin_time'], 'String');

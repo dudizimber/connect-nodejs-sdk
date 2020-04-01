@@ -43,7 +43,8 @@ var exports = function(modifierListIds) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('modifier_list_ids')) {
       obj['modifier_list_ids'] = ApiClient.convertToType(data['modifier_list_ids'], ['String']);

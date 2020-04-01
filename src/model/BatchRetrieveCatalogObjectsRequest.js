@@ -44,7 +44,8 @@ var exports = function(objectIds) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('object_ids')) {
       obj['object_ids'] = ApiClient.convertToType(data['object_ids'], ['String']);

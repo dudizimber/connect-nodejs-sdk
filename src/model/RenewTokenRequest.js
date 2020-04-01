@@ -43,7 +43,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('access_token')) {
       obj['access_token'] = ApiClient.convertToType(data['access_token'], 'String');

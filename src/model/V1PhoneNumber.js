@@ -46,7 +46,8 @@ var exports = function(callingCode, _number) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('calling_code')) {
       obj['calling_code'] = ApiClient.convertToType(data['calling_code'], 'String');

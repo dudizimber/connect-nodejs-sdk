@@ -45,7 +45,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('max_allowed_selections')) {
       obj['max_allowed_selections'] = ApiClient.convertToType(data['max_allowed_selections'], 'Number');

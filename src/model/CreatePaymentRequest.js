@@ -64,7 +64,8 @@ var exports = function(sourceId, idempotencyKey, amountMoney) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('source_id')) {
       obj['source_id'] = ApiClient.convertToType(data['source_id'], 'String');

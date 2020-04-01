@@ -52,7 +52,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('text_filter')) {
       obj['text_filter'] = ApiClient.convertToType(data['text_filter'], 'String');

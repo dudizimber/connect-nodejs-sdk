@@ -43,7 +43,8 @@ var exports = function(domainName) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('domain_name')) {
       obj['domain_name'] = ApiClient.convertToType(data['domain_name'], 'String');

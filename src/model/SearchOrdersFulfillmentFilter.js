@@ -44,7 +44,8 @@ var exports = function(fulfillmentTypes) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('fulfillment_types')) {
       obj['fulfillment_types'] = ApiClient.convertToType(data['fulfillment_types'], ['String']);

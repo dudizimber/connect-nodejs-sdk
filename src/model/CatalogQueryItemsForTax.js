@@ -43,7 +43,8 @@ var exports = function(taxIds) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('tax_ids')) {
       obj['tax_ids'] = ApiClient.convertToType(data['tax_ids'], ['String']);

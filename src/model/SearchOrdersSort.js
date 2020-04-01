@@ -44,7 +44,8 @@ var exports = function(sortField) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('sort_field')) {
       obj['sort_field'] = ApiClient.convertToType(data['sort_field'], 'String');

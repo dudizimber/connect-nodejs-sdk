@@ -44,7 +44,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('day_of_week')) {
       obj['day_of_week'] = ApiClient.convertToType(data['day_of_week'], 'String');

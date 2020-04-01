@@ -44,7 +44,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('measurement_unit')) {
       obj['measurement_unit'] = MeasurementUnit.constructFromObject(data['measurement_unit']);

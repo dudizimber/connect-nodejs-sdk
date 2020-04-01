@@ -45,7 +45,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('date_range')) {
       obj['date_range'] = DateRange.constructFromObject(data['date_range']);

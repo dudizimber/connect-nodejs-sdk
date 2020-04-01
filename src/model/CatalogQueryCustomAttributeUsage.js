@@ -43,7 +43,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('custom_attribute_definition_ids')) {
       obj['custom_attribute_definition_ids'] = ApiClient.convertToType(data['custom_attribute_definition_ids'], ['String']);

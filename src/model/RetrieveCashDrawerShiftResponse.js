@@ -45,7 +45,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('cash_drawer_shift')) {
       obj['cash_drawer_shift'] = CashDrawerShift.constructFromObject(data['cash_drawer_shift']);

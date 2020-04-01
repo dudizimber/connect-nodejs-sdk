@@ -44,7 +44,8 @@ var exports = function(workweekConfig) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('workweek_config')) {
       obj['workweek_config'] = WorkweekConfig.constructFromObject(data['workweek_config']);

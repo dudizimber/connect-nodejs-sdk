@@ -44,7 +44,8 @@ var exports = function() {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('standard_unit_descriptions')) {
       obj['standard_unit_descriptions'] = ApiClient.convertToType(data['standard_unit_descriptions'], [StandardUnitDescription]);

@@ -45,7 +45,8 @@ var exports = function(breakType) {
  */
 exports.constructFromObject = function(data, obj) {
   if (data) {
-    obj = obj || new exports();
+    //obj = obj || new exports();
+ obj = obj || {};
 
       if (data.hasOwnProperty('idempotency_key')) {
       obj['idempotency_key'] = ApiClient.convertToType(data['idempotency_key'], 'String');
